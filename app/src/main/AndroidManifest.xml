@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.flash.rupiah.pro">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 向SD卡中创建或者删除的权限。 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:icon, android:theme">
+        <activity android:name="com.flash.rupiah.pro.activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="com.lbz.myapp.fileprovider"-->
+            <!--android:exported="true"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_paths" />-->
+        <!--</provider>-->
+        <!-- facebook -->
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/Theme.AccountKit"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.LoanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.GuidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.NoCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.OpinionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.PrivacyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.LoanAgreementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.PersonalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.ContactInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.IndustryInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.IdentifyInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- Test -->
+        <activity
+            android:name="com.flash.rupiah.pro.activity.FaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.test.FaceBookLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.MyCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.LoanChannelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.ProvinceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.CityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.DistrictActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.AreaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.LoanListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.LoanDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.PayLoanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.flash.rupiah.pro.activity.WebActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
