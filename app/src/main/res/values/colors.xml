@@ -11,11 +11,11 @@
     <color name="center_grey">#666666</color>
     <color name="dark_grey">#333333</color>
     <color name="grey_bb">#bbbbbb</color>
-    <color name="green">#20a8fe</color>
+    <color name="green">#00c08c</color>
     <color name="check_color">#2cc64d</color>
     <color name="dark_green">#08ba63</color>
     <!--权限用颜色值    -->
-    <color name="bg_blue">#ff0694f5</color>
+    <color name="bg_blue">#ff00c08c</color>
     <color name="shouye_renmen_tv">#2b2b2b</color>
     <color name="lv_divider">#dad9e2</color>
     <color name="shouye_lv_tv">#909090</color>
@@ -30,7 +30,7 @@
     <color name="circle_bg">#272637</color>
     <color name="circle_grey">#a3a1b2</color>
     <color name="add_identify_bg">#dddddd</color>
-    <color name="green_tran">#20a8fe</color>
+    <color name="green_tran">#00c08c</color>
     <color name="channel">#ff0000</color>
     <color name="black">#000000</color>
     <color name="list_bg">#f4f4f4</color>
