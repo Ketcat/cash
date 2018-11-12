@@ -72,6 +72,11 @@ public class MainActivity extends BasicActivity {
     private NoScrollViewPager mViewPager;
     public static MainActivity mainActivity;
     public static boolean isFirst = true;
+
+    // 退出时间
+    private long currentBackPressedTime = 0;
+    // 退出间隔
+    private static final int BACK_PRESSED_INTERVAL = 2000;
     String smsInfo;
     String contactUser;
     String phoneDto;
@@ -115,14 +120,6 @@ public class MainActivity extends BasicActivity {
         }
     };
     int force = 0;
-    /**
-     * 退出定时
-     */
-    private Timer tExit = null;
-    /**
-     * 是否可以退出
-     */
-    private static Boolean isExit = false;
     private String imei;
 
     @Override
@@ -347,29 +344,22 @@ public class MainActivity extends BasicActivity {
     }
 
     @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
-            exitByDoubleClick();
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction() == KeyEvent.ACTION_DOWN
+                && event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis() - currentBackPressedTime > BACK_PRESSED_INTERVAL) {
+                currentBackPressedTime = System.currentTimeMillis();
+                Toast.makeText(MainActivity.this, R.string.click_agin_out, Toast.LENGTH_SHORT).show();
+                return true;
+            } else {
+                finish();
+                AccountKit.logOut();
+                System.exit(0);
+            }
+        } else if (event.getKeyCode() == KeyEvent.KEYCODE_MENU) {
+            return true;
         }
-        return false;
-    }
-
-    private void exitByDoubleClick() {
-        if (!isExit) {
-            isExit = true;
-            Toast.makeText(MainActivity.this, R.string.click_agin_out, Toast.LENGTH_SHORT).show();
-            tExit = new Timer();
-            tExit.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    isExit = false;//取消退出
-                }
-            }, 2000);// 如果2秒钟内没有按下返回键，则启动定时器取消掉刚才执行的任务
-        } else {
-            finish();
-            AccountKit.logOut();
-            System.exit(0);
-        }
+        return super.dispatchKeyEvent(event);
     }
 
     public void onRequestPermissionsResult(int requestCode, final String[] permissions, int[]
