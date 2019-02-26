@@ -44,8 +44,8 @@
 
                 <gradient
                     android:angle="0"
-                    android:endColor="#80ffc62d"
-                    android:startColor="#80ffc62d" />
+                    android:endColor="@color/progressbar_color"
+                    android:startColor="@color/progressbar_color" />
             </shape>
         </clip>
     </item>

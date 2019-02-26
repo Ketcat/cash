@@ -25,9 +25,8 @@ import java.util.List;
 public class WelcomeActivity extends BasicActivity {
     TextView tvTimer;
     private HashMap<String, String> map;//管理权限的map
-    String[] permissions = new String[]{"android.permission.ACCESS_FINE_LOCATION", "android.permission" +
-            "" + ".CAMERA", "android.permission.WRITE_EXTERNAL_STORAGE", "android.permission" +
-            "" + ".READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"};
+    String[] permissions = new String[]{ "android.permission" +
+            "" + ".CAMERA","android.Manifest.permission.READ_CONTACTS", "android.permission.WRITE_EXTERNAL_STORAGE"};
     boolean isFirst = false;
     long lastTime = 0;
     String token = "";

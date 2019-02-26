@@ -31,6 +31,7 @@
     <color name="circle_grey">#a3a1b2</color>
     <color name="add_identify_bg">#dddddd</color>
     <color name="green_tran">#00c08c</color>
+    <color name="progressbar_color">#8000c08c</color>
     <color name="channel">#ff0000</color>
     <color name="black">#000000</color>
     <color name="list_bg">#f4f4f4</color>

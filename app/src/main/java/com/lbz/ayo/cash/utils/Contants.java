@@ -15,7 +15,7 @@ public class Contants {
     public static final String HEADER_KEY = "X-AUTH-TOKEN"; //token
     public static final String TOKEN = "token"; //toke
     public static final String BASIC_URL = "http://149.129.214.206:8888";//正式环境
-//        public static final String BASIC_URL = "http://192.168.1.107:8888";
+//        public static final String BASIC_URL = "http://192.168.1.109:8888";
 //    public static final String BASIC_URL = "http://192.168.1.134:8888";
     public static final String LOGIN_ADDRESS = BASIC_URL + "/auth/login"; //登陆
     public static final String LOGOUT = BASIC_URL + "/auth/logout"; //登出
