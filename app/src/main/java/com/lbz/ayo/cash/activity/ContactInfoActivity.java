@@ -52,7 +52,7 @@ public class ContactInfoActivity extends BasicActivity implements View.OnClickLi
     Button btContactInfoSend;
     String token;
     ImageView ivBrother, ivFriend, ivSpouse;
-    String[] permissions = new String[]{"android.permission.READ_SMS", "android.permission" + ""
+    String[] permissions = new String[]{"android.permission" + ""
             + ".READ_CONTACTS"};
     @SuppressLint("HandlerLeak")
     Handler handler = new Handler() {
