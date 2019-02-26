@@ -87,8 +87,7 @@ public class CertificationFragment extends BasicFragment implements View.OnClick
     String bestPath, envPath;
     String money, dates, token;
     private HashMap<String, String> map;//管理权限的map
-    String[] permissions = new String[]{"android.permission.CAMERA", "android.permission" + "" +
-            ".READ_PHONE_STATE"};
+    String[] permissions = new String[]{"android.permission.CAMERA"};
     boolean isPersonalInfoPart, isContactPart, isFilePart, isEmploymentPart;
     @SuppressLint("HandlerLeak")
     Handler handlerSkip = new Handler() {
@@ -332,7 +331,7 @@ public class CertificationFragment extends BasicFragment implements View.OnClick
                 } else {
                     //授权失败
                     mHandler.sendEmptyMessage(2);
-                }
+            }
             }
         }).start();
     }
